@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="wonbae">
+    <meta name="description" content="TFT">
+    <title>TFT 전략적 팀 전투</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon/TFT32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/180.png">
+    <!-- 기본코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/TFT.css">
+    <!-- JS 플러그인 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 페이지 JS -->
+</head>
+<body>
+   <div id="wrap">
+    <!-- SideBar -->
+       <header class="side">
+           <div class="inner">
+               <!-- Logo -->
+               <ul>
+                   <li>
+                       <a href="https://www.riotgames.com/ko" target="_blank"><img src="./images/RG-2022.svg" alt="riot_logo" width="100px"></a>
+                       <a href="./index.html"><img src="./images/TFT_Gold.png" alt="tft_Logo" width="40px" height="40px"></a>
+                   </li>
+               </ul>
+               <p><img src="./images/TeamFight_Logo.svg" alt="tft_txtLogo"></p>
+               <!-- /Logo -->
+               <div class="hexagon">
+                   <div class="txt1"></div>
+                   <div class="txt2">
+                       <a href="https://download.kr.riotgames.com/league" target="_blank">무료로 플레이하기</a>
+                   </div>
+                   <div class="txt3"></div>
+               </div>
+               <h3>
+                  모바일과 PC에서 무료로 플레이하세요
+               </h3></a>
+               <div class="download">
+                   <a href="https://play.google.com/store/apps/details?id=com.riotgames.league.teamfighttactics&referrer=singular_click_id%3D6be04ed4-2619-4301-b104-a014c2a5e1c3&pli=1">
+                       <img src="./images/googleplay(150x50).png" alt="구글플레이">
+                   </a>
+                   <a href="https://apps.apple.com/app/id1480616748?referrer=singular_click_id%3D9132f196-2af4-4a57-86fe-8d367c87e2ff">
+                       <img src="./images/appStore(150x50).png" alt="앱스토어">
+                   </a>
+               </div>
+           </div>
+           <!-- Animation Arrow -->
+           <h3 class="arrow">
+               <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+               <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+               <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+           </h3>
+           <!-- /Animation Arrow -->
+       </header>
+    <!-- /SideBar -->
+
+    <!-- Header -->
+    <div class="region">
+        <h3>
+            현재 한국 지역만 검색 가능합니다.
+        </h3>
+    </div>
+    <nav>
+        <div class="navBack"></div>
+        
+        <div class="w85 gnb">
+            <ul class="sns">
+                <!-- SNS -->
+                <li><a href="https://lolchess.gg/" title="lolchess.gg" target="_blank"><img src="./images/lolchessLogo.png" alt="롤체지지로고"></a></li>
+                <li><a href="https://www.instagram.com/playtftkr/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/TeamfightTacticsKR/?locale=ko_KR" title="공식 페이스북" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/TFT" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/@TeamFightTacticsKR" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                <li class="meta">
+                    <a href="https://lolchess.gg/meta">
+                        <button>
+                            추천 메타/통계&nbsp;&nbsp;
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </li>
+                <!-- /SNS -->
+                <li class="search">
+                    <form action="https://lolchess.gg/search">
+                        <div class="search_bar">
+                            <input type="hidden" id="search_region" name="region" value="kr">
+                            <button type="button" class="change_region">
+                                <strong>KR</strong>
+                                <img src="./images/rotate.svg" alt="rotate" width="10" height="10">
+                            </button>
+                            <input class="b-search-name" placeholder="소환사 ID 검색" name="name" maxlength="30" required>
+                            <button type="submit" class="search_name">
+                                <img src="./images/search.svg" alt="search" width="12" height="12">
+                            </button>
+                        </div>
+                    </form>
+                </li>
+                <li class="login">
+                    <a href="https://auth.riotgames.com/login#client_id=prod-xsso-leagueoflegends&code_challenge=F_7iBjgcpjtO3sWavppvHUUniI3JU3YT-xFFyLfGvZ0&code_challenge_method=S256&redirect_uri=https%3A%2F%2Fxsso.leagueoflegends.com%2Fredirect&response_type=code&scope=openid%20account%20email&state=cf03d8636a47ba9551b0a25a44">
+                        <button>로그인</button>
+                    </a>
+                </li>
+                <li class="sign">
+                    <a href="https://signup.kr.riotgames.com/">
+                        <button>회원가입</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /Header -->
+
+    <!-- Contents -->
+    <main role="main">
+        <section class="contents cf">
+            <!-- Movie Clip 01 -->
+            <article>
+                <h2>Cinema</h2>
+                <video muted="muted" loop="loop">
+                    <source src="./images/v_cinematic.mp4" type="video/webm">
+                </video>
+                <div></div>
+                <h3>
+                    <a href="https://youtu.be/4HPfUrO5fBY" target="_blank">
+                        Cinema
+                        <h4><i class="fa fa-youtube-play"></i>영상 보기</h4>
+                    </a>
+                </h3>
+                <p>
+                    <strong>괴물 습격!</strong> <br><br>
+                    뒤집개특별시가 공격당하고 있습니다! <br>
+                    영웅 증강과 모루에서 제련된 아이템을 사용해 <br>
+                    투덜이, 수염냥, 남작이, 별수호자 럭스 등 <br>
+                    최고의 영웅들로 구성된 팀으로 승리하세요!
+                </p>
+            </article>
+            <!-- /Movie Clip 01 -->
+            <!-- Movie Clip 02 -->
+            <article>
+                <h2>Stylish</h2>
+                <video muted="muted" loop="loop">
+                    <source src="./images/v_show.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>
+                    <a href="https://youtu.be/2r5fHbOcQIk" target="_blank">
+                        Stylish
+                        <h4><i class="fa fa-youtube-play"></i>영상 보기</h4>
+                    </a>
+                </h3>
+                <p>
+                    <strong>스타일을 뽐내세요!</strong> <br><br>
+                    춤추고, 감정표현을 사용하며 <br>
+                    자신을 뽐내는 꼬마 전설이로 개성을 표현하세요.
+                </p>
+            </article>
+            <!-- /Movie Clip 02 -->
+            <!-- Movie Clip 03 -->
+            <article>
+                <h2>Genius</h2>
+                <video muted="muted" loop="loop">
+                    <source src="./images/v_how.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>
+                    <a href="https://youtu.be/tgU1D65BZIY" target="_blank">
+                        Genius
+                        <h4><i class="fa fa-youtube-play"></i>영상 보기</h4>
+                    </a>
+                    </h3>
+                <p>
+                    <strong>최후의 승자가 되세요!</strong> <br><br>
+                    전략적 팀 전투는 정상의 자리에 오르기 위해 경쟁하는<br>
+                    라운드 기반의 전투 게임입니다.<br>
+                    다양한 챔피언을 선택하고, 배치하고, 업그레이드하세요.<br>
+                    상대를 능가하고 상황에 맞는 적절한 플레이를 펼쳐보세요. <br>
+                </p>
+            </article>
+            <!-- /Movie Clip 03 -->
+            <!-- Movie Clip 04 -->
+            <article>
+                <h2>Play</h2>
+                <video muted="muted" loop="loop">
+                    <source src="./images/v_short.webm" type="video/webm">
+                </video>
+                <div></div>
+                <h3>
+                    <a href="https://youtu.be/FeIG65IRnkc" target="_blank">
+                        Play
+                        <h4><i class="fa fa-youtube-play"></i>영상 보기</h4>
+                    </a>
+                </h3>
+                <p>
+                    <strong>어디서든 플레이하세요!</strong> <br><br>
+                    서로 다른 플랫폼 간의 플레이를 지원하므로 <br>
+                    PC, Mac, 모바일 어디에서든 <br>
+                    친구들과 함께 플레이할 수도 있고 <br>
+                    적과 싸울 수도 있습니다.
+                </p>
+            </article>
+            <!-- /Movie Clip 04 -->
+        </section>
+    </main>
+    <!-- /Contents -->
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://teamfighttactics.leagueoflegends.com/ko-kr/news/" target="_blank">새 소식</a></li>
+                <li><a href="https://status.riotgames.com/?locale=ko_KR" target="_blank">서비스 상태</a></li>
+                <li><a href="https://support.riotgames.com/hc/ko" target="_blank">고객 지원</a></li>
+            </ul>
+        </nav>
+        <p>
+           <a href="https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect&referrer=singular_click_id%3D0602f535-a074-4847-b866-b69b190ccd32">라이엇 모바일 컴패니언 앱 다운로드</a>
+        </p>
+    </footer>
+    <!-- /Footer -->
+   </div>
+<script src="./js/TFT.js"></script> 
+</body>
+</html>

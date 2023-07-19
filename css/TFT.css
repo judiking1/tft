@@ -1,0 +1,505 @@
+@charset "utf-8";
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: url('../images/TFT_bg.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Dongle', sans-serif;
+}
+.w85 {
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.side {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 22.5vw;
+    height: 100vh;
+    background: #111;
+    text-align: center;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    z-index: 2;
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+/* 호버시 효과 */
+.side:hover {
+    left: 0;
+    opacity: 0.8;
+}
+.side .inner {
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    left: -18.5vw;
+    bottom: 25vh;
+    transform: translateY(50%);
+    z-index: 2;
+    transition: all 1s;
+}
+/* 호버시 효과 */
+.side:hover .inner {
+    left: 1vw;
+}
+
+.side .inner ul li {
+    width: 100vw;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.side .inner ul li>a {
+    margin-right: 2vw;
+}
+.side .inner ul li a:hover {
+    transform: scale(1.1);
+}
+.side .hexagon {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.side .hexagon:hover .txt2 {
+    background: purple;
+    color: white;
+}
+.side .hexagon:hover .txt1 {
+    border-right: 1vw solid purple;
+}
+.side .hexagon:hover .txt3 {
+    border-left: 1vw solid purple;
+}
+.side .txt2 {
+    width: 7.5vw;
+    height: 4.2vh;
+    background: #39c7ff;
+    font-size: 1.4vh;
+    padding-top: 1.3vh;
+    font-weight: bold;
+    text-align: center;
+}
+.side .txt1 {
+    width: 0;
+    height: 0;
+    border-top: 2.2vh solid transparent;
+    border-right: 2.2vh solid #39c7ff;
+    border-bottom: 2.2vh solid transparent;
+}
+.side .txt3 {
+    width: 0;
+    height: 0;
+    border-top: 2.2vh solid transparent;
+    border-left: 2.2vh solid #39c7ff;
+    border-bottom: 2.2vh solid transparent;
+}
+.side h3 {
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.side .download {
+    margin-top: 2vh;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.side .download a:hover img{
+    transform: scale(1.1);
+}
+
+/* Arrow */
+.arrow {
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    transition: all 1s;
+}
+.arrow i {
+    font-size: 6vh;
+    color: #fccb4e;
+    position: absolute;
+    left: -2vw;
+    bottom: 0;
+    z-index: 999;
+}
+.side:hover .arrow {
+    opacity: 0;
+}
+/* 애니메이션 효과 */
+.arrow i:nth-child(1){
+    animation: arrowAni linear 1.5s 0s infinite;
+}
+.arrow i:nth-child(2){
+    animation: arrowAni linear 1.5s 0.5s infinite;
+}
+.arrow i:nth-child(3){
+    animation: arrowAni linear 1.5s 1s infinite;
+}
+/* 애니메이션 키프레임 */
+@keyframes arrowAni {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        left: -1vw;
+    }
+    to {
+        opacity: 0.3;
+        transform: scale(1.2);
+        left: 3.5vw;
+    }
+}
+
+/* SNS */
+.navBack {
+    width: 100vw;
+    height: 5.9vh;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.region {
+    width: 12.5vw;
+    height: 10vh;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    background: white;
+    opacity: 0.9;
+    border-radius: 2vh;
+    position: fixed;
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 5;
+    /* 로딩시 안보이게 */
+    display: none;
+}
+.region h3 {
+    font-weight: bold;
+    position: absolute;
+    left: 0.5vw;
+    top: 5vh;
+    transform: translateY(-50%);
+}
+.gnb {
+    position:relative;
+    right: 5vw;
+    top: 1.5vh;
+    z-index: 3;
+}
+.sns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    z-index: 100;
+}
+.sns li {
+    margin-right: 2vw;
+}
+
+.sns .meta {
+    margin-left: 27vw;
+}
+.sns .meta button {
+    font-size: 1.3vh;
+    width: 11vw;
+    background: none;
+}
+.sns .meta a:hover i{
+    color: #ff973a;
+    transform: scale(1.3);
+}
+
+.sns .sign {
+    margin-right: 0;
+}
+.search_bar{
+    display: flex;
+}
+.search_bar .change_region {
+    display: flex;
+    height: 3.5vh;
+    background: none;
+    border: 1px solid #282828;
+    margin-right: 5px;
+}
+.search_bar .change_region img {
+    margin-left: 1.25vw;
+    margin-top: 0.5vh;
+}
+.search_bar .change_region:hover img{
+    transform: scale(1.3);
+}
+
+.search_bar .b-search-name {
+    width: 10vw;
+    background: #282828;
+    border-radius: 5px;
+    color: white;
+    transform: translateY(-2px); 
+    transition: all 0.3s;
+}
+.search_bar .b-search-name:focus{
+    width: 11vw;
+}
+.search_bar .b-search-name:focus::placeholder{
+    opacity: 0.2;
+}
+.search_bar .b-search-name:hover::placeholder {
+    opacity: 0.2;
+}
+.search_bar .b-search-name::placeholder {
+    padding-left: 1.5vw;
+    background: #282828;
+    color: white;
+    transition: all 0.5s;
+}
+.search_bar .search_name {
+    background: #282828;
+    margin-left: 0.5vw;
+}
+.search_bar .search_name img{
+    margin-top: 3px;
+}
+.search_bar .search_name:hover img{
+    transform: scale(1.3);
+}
+
+.sns li a {
+    font-size: 2.4vh;
+}
+.sns li button {
+    padding: 1vh 0.5vw;
+    background: #282828;
+    border-radius: 5px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.2vh;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.sns .login button{
+    width: 6vw;
+    background: linear-gradient(to right, #ff6b34, #ff973a);
+    color: #000;
+    margin-right: -0.75vw;
+    height: 3.5vh;
+}
+.sns .sign button {
+    width: 6vw;
+    height: 3.5vh;
+    margin-right: 1vw;
+}
+.sns li a i {
+    transform: translateY(5px);
+}
+.sns .meta a i {
+    font-size: 1.5vh;
+    transform: translateY(-1px);
+}
+
+.sns li a .fa-instagram{
+    background: linear-gradient(to left bottom, #833ab4, #fcb045);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+}
+.sns li a .fa-facebook-f{color: #194fe2;}
+.sns li a .fa-twitter{color: #39c7ff;}
+.sns li a .fa-youtube-play{color: red;}
+.sns li a:hover button{
+    opacity: 0.9;
+}
+.sns li a:hover i {
+    transform: scale(1.5);
+}
+.sns li a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* Contents */
+.contents {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.contents article {
+    width: 15vw;
+    height: 100vh;
+    background: url('../images/divider.png') no-repeat left center;
+    /* 플롯 */
+    float: right;
+    overflow: hidden;
+    transition: all 0.7s;
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+.contents article h2 {
+    /* 포지션 */
+    position: absolute;
+    left: 1vw;
+    top: 50vh;
+    z-index: 100;
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    /* 텍스트 옆 데코라인 */
+    border-left: 3px solid #fccb4e;
+    padding-left: 0.75vw;
+    margin-top: -2vh;
+    transition: all 1.5s;
+}
+/* 호버 효과 */
+.contents article:hover h2 {
+    color: #fff;
+    border-color: #ccc;
+    opacity: 0;
+}
+
+/* Movie Clip */
+.contents article video {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 3;
+    transition: all 1.2s;
+}
+
+
+/* 호버 효과 */
+.contents article:hover video {
+    opacity: 1;
+}
+.contents article div {
+    width: 100%;
+    height: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    opacity: 0.3;
+    z-index: 2;
+    transition: all 0.5s;
+}
+/* 호버 효과 */
+.contents article:hover div {
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+}
+.contents article h3 {
+    font-size: 5vh;
+    color: #fff;
+    text-align: right;
+    position: absolute;
+    right: -17.5vw;
+    bottom: 30vh;
+    z-index: 4;
+    transition: all 0.5s 0.2s;
+}
+/* 호버 효과 */
+.contents article:hover h3 {
+    right: 1vw;
+}
+.contents article h3 h4 {
+    font-size: 3.2vh;
+}
+.contents article h3:hover h4{
+    color: red;
+}
+.contents article h3 h4 i {
+    transform: translateY(5px);
+    margin-right: 5px;
+}
+.contents article p {
+    width: 17.5vw;
+    height: 15vh;
+    font: 2.4vh/1.2 "Dongle", sans-serif;
+    color: #fff;
+    text-align: right;
+    position: absolute;
+    right: -20vw;
+    bottom: 13vh;
+    z-index: 4;
+    transition: all 0.5s 0.7s;
+}
+/* 호버 효과 */
+.contents article:hover p {
+    right: 1vw;
+}
+.contents article p strong {
+    color: #fff;
+    font-size: 3.2vh;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    width: 100vw;
+    height: 4vh;
+    background: #000;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    line-height: 4vh;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0.8;
+}
+footer nav {
+    font-size: 1.6vh;
+    position: absolute;
+    left: 3.5vw;
+    bottom: 0;
+    z-index: 1;
+}
+footer nav li {
+    display: inline-block;
+    margin-right: 3.5vw;
+}
+footer nav li:hover {
+    color: #fccb4e;
+    transform: scale(1.1);
+}
+footer p {
+    font-size: 1.4vh;
+    position: absolute;
+    right: 3.5vw;
+    bottom: 0;
+    z-index: 1;
+}
+
+footer p:hover {
+    color: #fccb4e;
+    transform: scale(1.1);
+}
